@@ -1,0 +1,103 @@
+#searchForm {
+    display: grid;
+    grid-template-columns: 1fr auto; /* One column for input and one for the button */
+    align-items: center;
+    gap: 10px; 
+}
+
+#searchForm input{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    border: 0;
+    border-bottom: 2px solid lightgrey;;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 700;
+    padding: 15px 0 0;
+    background: transparent;
+
+}
+
+#searchForm input:focus {
+    padding-bottom: 6px;
+    border-bottom: 3px solid;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e,#38ef7d);
+    border-image-slice: 1;
+    background-color: transparent;
+}
+
+
+#mapContainer {
+    display: flex;
+    flex-direction: center;
+    height: 60vh;
+    animation: fadeIn 2s;
+}
+
+
+#weatherDisplay {
+    display: flex;         
+    align-items: center;  
+    justify-content: center; 
+    padding: 20px;
+}
+
+#weatherDisplay .weatherInfo {
+    display: flex;       
+    flex-direction: column; 
+    justify-content: center; 
+    flex-grow: 1;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+#weatherDisplay img {
+    display: flex;
+    width: 100px;   
+    height: auto;          
+    padding: 20px;
+    animation: fadeIn 2s;
+}
+
+button{
+    --bg: transparent;
+    --hover-bg: linear-gradient(to right, #11998e,#38ef7d);
+    --hover-text: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg);
+    border-radius: 3px;
+    border-color: white;
+    padding: 0.8em 2em;
+    margin-top: 3%;
+    background: var(--bg);
+    transition: 0.2s
+}
+
+button:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+button:active {
+    transform: translate(0);
+    box-shadow: none;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222222;
+}
